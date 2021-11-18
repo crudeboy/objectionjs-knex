@@ -1,0 +1,22 @@
+{
+  "name": "objectionjsknex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "make-seed": "yarn knex seed:make dev --knexfile ./db/knexfile.js",
+    "migrate": "yarn knex migrate:latest --knexfile ./db/knexfile.js",
+    "seed": "yarn knex seed:run --knexfile ./db/knexfile.js",
+    "down": "yarn knex migration:down --knexfile ./db/knexfile.js",
+    "dev": "yarn nodemon ./index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.95.14",
+    "objection": "^3.0.0",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
